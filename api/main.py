@@ -54,10 +54,10 @@ def process_array(data):
 @app.post("/bfhl", response_model=DataResponse)
 async def bfhl_api(request: DataRequest):
     try:
-        user_fullname = "yourfullname"   # Replace as needed
-        user_dob = "06101999"            # Replace as needed (ddmmyyyy)
-        email = "your@email.com"         # Replace as needed
-        roll_number = "ROLL123"          # Replace as needed
+        user_fullname = "RAJ"  
+        user_dob = "06102006"            
+        email = "abc@email.com"         
+        roll_number = "12345678"          
         
         even, odd, alphabets, specials, sum_nums, alt_caps = process_array(request.data)
         return {
