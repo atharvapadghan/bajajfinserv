@@ -51,6 +51,10 @@ def process_array(data):
 
     return even, odd, alphabets, specials, sum_nums, alt_caps
 
+@app.get("/bfhl")
+async def bfhl_healthcheck():
+    return {"operation_code": 1}
+
 @app.post("/bfhl", response_model=DataResponse)
 async def bfhl_api(request: DataRequest):
     try:
