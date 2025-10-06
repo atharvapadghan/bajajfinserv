@@ -27,7 +27,6 @@ def process_array(data):
     specials = []
     nums = []
     
-    # Regex for alphabet check (allowing letter strings)
     alpha_re = re.compile(r"^[a-zA-Z]+$")
 
     for item in data:
@@ -76,7 +75,3 @@ async def bfhl_api(request: DataRequest):
     except Exception as exc:
         raise HTTPException(status_code=400, detail=f"Error: {exc}")
 
-# To run locally:
-# uvicorn main:app --reload
-
-# When deploying, follow the platform's FastAPI deployment guidance.
